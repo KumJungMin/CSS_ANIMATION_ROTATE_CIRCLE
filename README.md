@@ -81,7 +81,9 @@ body {
 - square에 hover시, span에 이벤트가 발생하게 설정한다.
 - span들에 이벤트가 발생하면 몇초 후 시작하는 지 설정한다.
 - `animation-direction: reverse`을 사용하여 애니메이션 방향을 반대로 만든다.
-   (여러 원 중에서 하나를 반대로 회전하게 하면 더 애니메이션이 자연스러움)  
+      
+*(여러 원 중에서 하나를 반대로 회전하게 하면 애니메이션이 자연스러움)*  
+
 - `square:hover span:nth-child(1)`은 square의 hover시 -> span 형제중 첫째에게 어떤 효과가 적용됨.
   
 ```css
