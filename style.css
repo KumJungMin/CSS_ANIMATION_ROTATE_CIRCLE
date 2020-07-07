@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.square {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.square span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+  /* border-radius에 /를 이용하여 2가지를 %를 입력하면 창의적으로 찌그러진 원 만들 수 있음  */
+  /* 가로40%,  세로 60%를 해서 찌그러진 원 만듬 */
+  transition: 0.5s;
+  /* 마우스가 올라갔을 때  배경색이 변경되는 이벤트에 딜레이를 줌 */
+  /* animation: circle 5s linear infinite; */
+}
+
+.square:hover span {
+  border: none;
+}
+
+.square span:nth-child(1) {
+  animation: circle 6s linear infinite;
+}
+.square span:nth-child(2) {
+  animation: circle 4s linear infinite;
+  animation-direction: reverse;
+  /* 애니메이션 방향을 반대로도 가능 */
+}
+.square span:nth-child(3) {
+  animation: circle 10s linear infinite;
+}
+
+.square:hover span:nth-child(1) {
+  opacity: 0.3;
+  background-color: crimson;
+}
+.square:hover span:nth-child(2) {
+  opacity: 0.6;
+  background-color: darkorange;
+}
+.square:hover span:nth-child(3) {
+  opacity: 0.9;
+  background-color: yellowgreen;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.square div {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  text-align: center;
+  color: #fff;
+}
+
+.square div a {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+  padding: 8px;
+  text-decoration: none;
+}
